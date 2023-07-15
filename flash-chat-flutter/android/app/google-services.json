@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "489876758781",
+    "project_id": "chat-app-c795e",
+    "storage_bucket": "chat-app-c795e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489876758781:android:8b3a395bef4ae7f3b1de94",
+        "android_client_info": {
+          "package_name": "co.bishal929.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489876758781-vaaisuoms7qt068tv74fie4or7ue1vba.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIkUDoZAlrnRQ5Ynp_AxK_rkNtyvlCSSQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489876758781-vaaisuoms7qt068tv74fie4or7ue1vba.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,6 +4,8 @@ import 'package:rflutter_alert/rflutter_alert.dart';
 import 'quiz_brain.dart';
 
 QuizBrain quizBrain = QuizBrain();
+int score = 0;
+int totalQuestions = quizBrain.size();
 
 void main() => runApp(Quizzler());
 
@@ -37,26 +39,26 @@ class _QuizPageState extends State<QuizPage> {
 
     setState(() {
       if (quizBrain.isFinished()) {
-        Alert(
-          context: context,
-          type: AlertType.success,
-          title: "FINISH",
-          desc: "You have completed the quiz",
-          buttons: [
-            DialogButton(
-              child: Text(
-                "CLOSE",
-                style: TextStyle(color: Colors.white, fontSize: 20),
-              ),
-              onPressed: () => SystemNavigator.pop(),
-              width: 120,
-            )
-          ],
-        ).show();
-        quizBrain.reset();
-        scoreKeeper.clear();
+        if ((score / totalQuestions) * 100 < 50) {
+          Alert(
+                  context: context,
+                  title: "FAIL",
+                  desc: "Oops! you can try again")
+              .show();
+          quizBrain.reset();
+          scoreKeeper.clear();
+        } else {
+          Alert(
+                  context: context,
+                  title: "PASSED",
+                  desc: "Congratulation You have passed the Quiz")
+              .show();
+          quizBrain.reset();
+          scoreKeeper.clear();
+        }
       } else {
         if (userPickedAnswer == correctAnswer) {
+          score++;
           scoreKeeper.add(Icon(
             Icons.check,
             color: Colors.green,

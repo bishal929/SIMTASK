@@ -52,4 +52,8 @@ class QuizBrain {
   void reset() {
     _questionNumber = 0;
   }
+
+  int size() {
+    return _questionBank.length;
+  }
 }
